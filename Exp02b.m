@@ -1,0 +1,22 @@
+clc;
+clear;
+close all;
+
+A = 1;
+w = pi/10;
+n = 1:40;
+x(n) = A*exp(j*w*n);
+Im = imag(x);
+Re = real(x);
+Mg = abs(x);
+Ph = angle(x); 
+subplot (5,1,1), stem (n,Re);
+title ('Real part of x(n) Vs n');
+subplot (5,1,2), stem (n,Im);
+title ('Imaginary part of x(n) Vs n');
+subplot (5,1,3), plot (Re,Im);
+title ('Imaginary part of x(n) Vs Real part of x(n)');
+subplot (5,1,4), stem (n,Mg);
+title ('Magnitude of x(n) Vs n');
+subplot (5,1,5), stem (n,Ph);
+title ('Phase of x(n) Vs n');

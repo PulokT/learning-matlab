@@ -1,0 +1,4 @@
+clc;
+clear all;
+close al
+[a,b,c]=quant(4,x);
